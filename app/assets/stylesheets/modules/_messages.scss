@@ -65,6 +65,10 @@
       font-size: 15px;
       color: #000000;
       padding: 20px 20px 0px 20px;
+      &__m4{
+        font-size: 15px;
+        color: #000000;
+      }
       &__m3{
         font-size: 10px;
       }
@@ -172,10 +176,10 @@
         }
       }
       &__submit{
-        border: 1px solid #38aef0;
-        background-color: #38aef0;
+        border: 1px solid #333;
+        background-color: #ffffff;
         font-size: 16px;
-        color: #fff;
+        color: #3388aa;
         height: 50px;
         padding: 0 30px;
         margin-left: 15px;
