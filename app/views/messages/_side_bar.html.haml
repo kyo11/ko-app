@@ -1,0 +1,20 @@
+.side-bar
+  .side-bar__user-name
+    .side-bar__user-name__box
+      %h3.side-bar__user-name__box__top-items
+        = current_user.name
+  .side-bar__group-list
+    %ul.side-bar__group-list__items__icons
+      %li.side-bar__group-list__items__icons__messege-box
+        = link_to edit_user_path(current_user) do
+          = icon('far', 'edit') 
+      %li.side-bar__group-list__items__icons__mess
+        = link_to "#" do
+          = icon('fas', 'cog')
+      %li.side-bar__group-list__items__icons__3
+        = link_to "#" do
+          = icon('fas', 'users')
+    .side-bar__group-list__m2
+      name
+      .side-bar__group-list__m2__m3
+        name
