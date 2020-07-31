@@ -14,10 +14,10 @@
             = icon('fas', 'cog')
         %li.side-bar__group-list__items__icons__3
           = link_to "#" do
-            = icon('fas', 'users')
+            = icon('fas', 'user-edit')
       .side-bar__group-list__m2
-        = link_to '#' do
+        = link_to group_messages_path(group) do
           .side-bar__group-list__m2__m4
             = group.name
           .side-bar__group-list__m2__m3
-            name
+            = group.show_last_message

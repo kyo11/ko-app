@@ -2,20 +2,30 @@
   .chat-main__group-info
     .chat-main__group-info__group-in
       .chat-main__group-info__groupitira
-        name
+        = @group.name
       .chat-main__group-info__mememe
-        nane
+        - @group.users.each do |user|
+          = user.name
   .message
+    = render @messages
     .message-list
       .message-list__messagelliki
         .message-list__messagelliki__messageiki masa
         .message-list__messagelliki__messaged 2019/11/20(Wed) 17:43:01
       .message-list__messoha おはよう
+  -# .message-form
+  -#   .form
+  -#     .form__contents
+  -#       %input{type: "text", class: "form__contents__inputContent"}
+  -#       %label{class: "form__contents__inputImage"}
+  -#         = icon('fas', 'image')
+  -#         %input{type: "file", class:"Hidden"}
+  -#     %input{type: "submit", class: "form__submit", "value": "送信"}
   .message-form
-    .form
+    = form_with model: [@group, @message], html: {class: "form"}, local: true do |f|
       .form__contents
-        %input{type: "text", class: "form__contents__inputContent"}
-        %label{class: "form__contents__inputImage"}
-          = icon('fas', 'image')
-          %input{type: "file", class:"Hidden"}
-      %input{type: "submit", class: "form__submit", "value": "送信"}
+        = f.text_field :content, class: 'form__contents__inputContent', placeholder: 'type a message'
+        = f.label :image, class: 'form__contents__inputImage' do
+          = icon('far', 'image', class: 'form__contents__icon')
+          = f.file_field :image, class: 'Hidden'
+      = f.submit 'Send', class: 'form__submit'
