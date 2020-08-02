@@ -3,21 +3,21 @@
     .side-bar__user-name__box
       %h3.side-bar__user-name__box__top-items
         = current_user.name
-  .side-bar__group-list
+    %ul.side-bar__user-name__top-items__icons 
+      %li.side-bar__user-name__top-items__icons__edt 
+        = link_to new_group_path do
+          = icon('far', 'edit') 
+      %li.side-bar__user-name__top-items__icons__cog
+        = link_to edit_user_path(current_user) do
+          = icon('fas', 'cog')  
+      %li.side-bar__user-name__top-items__icons__ggg
+        =link_to "https://www.google.com/" do
+          = icon('fab', 'google')
+  .side-bar__group-list 
     - current_user.groups.each do |group|
-      %ul.side-bar__group-list__items__icons
-        %li.side-bar__group-list__items__icons__messege-box
-          = link_to edit_user_path(current_user) do
-            = icon('far', 'edit') 
-        %li.side-bar__group-list__items__icons__mess
-          = link_to "#" do
-            = icon('fas', 'cog')
-        %li.side-bar__group-list__items__icons__3
-          = link_to "#" do
-            = icon('fas', 'user-edit')
-      .side-bar__group-list__m2
+      .side-bar__group-list__group-box
         = link_to group_messages_path(group) do
-          .side-bar__group-list__m2__m4
+          .side-bar__group-list__group-box__messege-box
             = group.name
-          .side-bar__group-list__m2__m3
+          .side-bar__group-list__group-box__mess
             = group.show_last_message

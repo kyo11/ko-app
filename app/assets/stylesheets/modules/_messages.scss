@@ -13,7 +13,6 @@
 
   &__user-name{
     height: 100px;
-    display: flex;
     align-items: center;
     background-color: #005FFF;
     &__box{
@@ -23,58 +22,68 @@
       justify-content: space-between;
       margin: 0 20px;
       justify-content: center;
+    }
+  
       &__top-items{
         display: flex;
         list-style: none; 
         font-size: 16px;
       }
+    
+  
+  .side-bar__user-name__top-items__icons {
+    padding: 20px 20px 20px 20px;
+    display: flex;
+    a {
+      text-decoration: none;
+      }
+    
+    &__messege-box{
+      font-size: 20px;
+      color: #000000;
+      a {
+        color: #000000; 
+       }
     }
+    &__mess{
+      font-size: 20px;
+      color: #000000
+    }
+    a {
+      color: #000000; 
+     }
+    &__3{
+      font-size: 20px;
+      color: #000000
+    }
+  }
   }
   &__group-list{
     height: calc(100vh - 100px) ;
     background-color: #BAD3FF;
     overflow: scroll;
     text-decoration: none;
-    &__items__icons{
-      padding: 20px 20px 20px 20px;
-      display: flex;
-      a {
-        text-decoration: none;
-        }
-      
-      &__messege-box{
-        font-size: 20px;
-        color: #000000;
-        a {
-          color: #000000; 
-         }
-      }
-      &__mess{
-        font-size: 20px;
-        color: #000000
-      }
-      a {
-        color: #000000; 
-       }
-      &__3{
-        font-size: 20px;
-        color: #000000
-      }
-    }
-    &__m2{
+    
+    &__group-box{
       font-size: 15px;
       color: #000000;
       padding: 20px 20px 0px 20px;
-      &__m4{
+      a {
+        text-decoration: none;
+      }
+      &__messege-box{
         font-size: 15px;
         color: #000000;
       }
-      &__m3{
+      &__mess{
         font-size: 10px;
+        color: #000000;
+        text-decoration: none;
       }
     }
   }
 }
+
 
 .chat-main{
   width: calc(100vw - 300px);
@@ -83,7 +92,7 @@
 
   &__group-info {
     background-color: #BAD3FF;
-    height: 60px;
+    height: 70px;
     width: calc(100vw - 300px);
     display: flex;
     justify-content: space-between;
@@ -103,19 +112,16 @@
       padding-left: 40px;
       padding: 35px 0 15px 40px;
     }
-    &__editttt{
-      font-size: 16px;
-      border: 1px solid #38aef0;
-      padding: 0 20px 0 20px;
-      margin: 28px 40px 0 0;
-      height: 40px;
-      display: flex;
-      align-items: center;
-      .edit-btn{
-        text-decoration: none;
-        color: #38aef0;;
+    &__2{
+      font-size: 15px;
+      color: #000000;
+      text-decoration: none;
+      padding: 20px;
+      a{
+        color: #000000;
       }
-    }
+      }
+    
   }
   .message{
     background-color: #ffffff;
@@ -145,7 +151,7 @@
   }
   .message-form {
     background-color: #ffffff;
-    height: 130px;
+    height: 120px;
     width: calc(100vw - 300px);
     display: flex;
 

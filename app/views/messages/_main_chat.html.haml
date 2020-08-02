@@ -6,13 +6,16 @@
       .chat-main__group-info__mememe
         - @group.users.each do |user|
           = user.name
+    .chat-main__group-info__2
+      = link_to edit_group_path(@group.id), class: "edit-btn" do
+        = icon('fas', 'user-edit')
   .message
     = render @messages
-    .message-list
-      .message-list__messagelliki
-        .message-list__messagelliki__messageiki masa
-        .message-list__messagelliki__messaged 2019/11/20(Wed) 17:43:01
-      .message-list__messoha おはよう
+    -# .message-list
+    -#   .message-list__messagelliki
+    -#     .message-list__messagelliki__messageiki masa
+    -#     .message-list__messagelliki__messaged 2019/11/20(Wed) 17:43:01
+    -#   .message-list__messoha おはよう
   -# .message-form
   -#   .form
   -#     .form__contents
@@ -24,8 +27,8 @@
   .message-form
     = form_with model: [@group, @message], html: {class: "form"}, local: true do |f|
       .form__contents
-        = f.text_field :content, class: 'form__contents__inputContent', placeholder: 'type a message'
+        = f.text_field :content, class: 'form__contents__inputContent'
         = f.label :image, class: 'form__contents__inputImage' do
           = icon('far', 'image', class: 'form__contents__icon')
           = f.file_field :image, class: 'Hidden'
-      = f.submit 'Send', class: 'form__submit'
+      = f.submit '送信', class: 'form__submit'

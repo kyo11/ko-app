@@ -6,7 +6,7 @@ h1 {
 }
 h2 {
   margin-bottom: 10px;
-  color: #f05050;
+  color: #00FF00;
   font-size: 14px;
 }
 
@@ -26,8 +26,8 @@ li {
   width: 980px;
   margin: 60px auto;
   padding: 40px;
-  background-color: #fff;
-  border: 1px solid #ddd;
+  background-color: #EEFFFF;
+  // border: 1px solid #ddd;
   border-radius: 5px;
   box-sizing: border-box;
   &__field {
@@ -58,7 +58,7 @@ li {
   }
   &__button {
     display: inline-block;
-    padding: 12px 20px;
+    padding: 12px 80px;
     color: #fff;
     background-color: #38aef0;
     border: 0;
@@ -66,7 +66,7 @@ li {
   &__errors {
     margin: 30px 0;
     padding: 20px 40px;
-    border: 1px solid #ddd;
+    // border: 1px solid #ddd;
     border-radius: 2px;
     text-align: center;
   }
@@ -76,7 +76,7 @@ li {
   padding: 0 15px;
   line-height: 50px;
   font-size: 14px;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #f05050;
   display: flex;
   justify-content: space-between;
   &__button {
