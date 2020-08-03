@@ -1,1 +1,24 @@
-%p#text
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:charset => "UTF-8"}/
+    %title BINGO MACHINE
+    %link{:href => "css/style.css", :rel => "stylesheet", :type => "text/css"}/
+  %body
+    %div
+      #panel1.panel ︎
+      #panel10.panel ︎
+    #btn0.btn.inactive STOP
+    #spinButton SPIN
+    #result
+    %div
+      .copy
+        By
+        = succeed "," do
+          %a{:href => "https://twitter.com/Fujiyama_Yuta"} ＠Fujiwara_Yuta
+    %audio#audio_drum{:src => "audio/drumroll.wav"}
+    %audio#audio_cymbal{:src => "audio/cymbal.wav"}
+    %script{:src => "jquery/jquery.min.js", :type => "text/javascript"}
+    %script{:src => "jquery/jquery-ui.min.js", :type => "text/javascript"}
+    %script{:src => "js/Bingo.js", :type => "text/javascript"}
