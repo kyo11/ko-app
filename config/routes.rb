@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   # get 'messages/index'
   # resources :articles
   root 'groups#index'
-  resources :game, only: [:index]
+  resources :calendar, only: [:index]
   resources :users, only: [:index, :edit, :update]
   resources :groups, only: [:new, :create, :edit, :update] do
     resources :messages, only: [:index, :create]
