@@ -16,6 +16,9 @@
       %li.side-bar__user-name__top-items__icons__eee
         = link_to "https://lets-emoji.com/emojilist/emojilist-1/" do
           = icon('fas', 'icons')
+      %li.side-bar__user-name__top-items__icons__uuu
+        = link_to calendar_index_path do
+          = icon('fas', 'calendar')
   .side-bar__group-list 
     - current_user.groups.each do |group|
       .side-bar__group-list__group-box
