@@ -21,10 +21,7 @@ default: &default
 development:
   <<: *default
   database: ko_app_development
-  username: root
-  password: <%= ENV['DATABASE_PASSWORD'] %>
-  socket: /var/lib/mysql/mysql.sock
-
+  
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -55,5 +52,8 @@ test:
 production:
   <<: *default
   database: ko_app_production
-  username: ko_app
-  password: <%= ENV['KO_APP_DATABASE_PASSWORD'] %>
+  # username: ko_app
+  # password: <%= ENV['KO_APP_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
