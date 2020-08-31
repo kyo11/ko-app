@@ -1,24 +1,61 @@
-# README
+# chat-app
+チャットアプリのクローンサイト。
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Description
+チャットアプリのクローンサイト。チャットができるサイトです。
+ユーザー登録、ユーザー編集、コメント投稿などの機能が実装されています。
 
-Things you may want to cover:
 
-* Ruby version
+## Features
 
-* System dependencies
+- haml/SASS記法と、命名規則BEMを使ったマークアップ
+- ajaxを使用した非同期処理
 
-* Configuration
+## Requirement
 
-* Database creation
+- Ruby 2.6.5
+- Rails 6.0.0
 
-* Database initialization
+## 実装内容
+チャット機能実装_サーバーサイド＆マークアップ
+ユーザー登録機能_サーバーサイド＆マークアップ
+ユーザー編集機能_サーバーサイド＆マークアップ
+カレンダー機能_サーバーサイド＆マークアップ
+Googleに飛ぶ機能
+絵文字サイトに飛ぶ機能
 
-* How to run the test suite
+## Installation
+    chat-app
+    $ cd chat-app
+    $ bundle install
 
-* Services (job queues, cache servers, search engines, etc.)
+## users table
+|Column|Type|Options|
+|------|----|-------|
+|nickname|string|null false|
+|firstname|string|null false|
+|lastname|string|null false|
+|email|string|null false, unique true|
+|password|string|null false|
 
-* Deployment instructions
+### Association
+- has_one :address
+- has_many :messages
+- has_many :groups
 
-* ...
+## messages table
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null false|
+
+### Association
+- belongs_to :user
+
+## groups table
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null false|
+
+### Association
+- has_many :user
+
