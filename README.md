@@ -59,3 +59,8 @@ Googleに飛ぶ機能
 ### Association
 - has_many :user
 
+## email address
+sample@sample.com
+
+## password
+sample11
